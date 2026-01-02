@@ -1,0 +1,29 @@
+.bookmarks-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.bookmarks-container {
+  flex: 1;
+  padding: 2rem;
+  background-color: var(--light-gray);
+}
+
+.bookmarks-container h1 {
+  color: var(--navy);
+  margin-bottom: 1.5rem;
+}
+
+.bookmarks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.no-bookmarks {
+  text-align: center;
+  padding: 2rem;
+  color: #777;
+  background-color: white;
+  border-radius: 10px;
+}

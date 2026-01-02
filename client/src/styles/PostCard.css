@@ -1,0 +1,430 @@
+.post-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-width: 320px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Compact header with tight spacing */
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem; /* Equal padding on all sides */
+  min-height: 48px;
+  gap: 6px; /* Reduced gap between items */
+  justify-content: flex-start; /* Ensure items start from the left */
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+/* Search bar in post card */
+.post-search-container {
+  padding: 0.75rem;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.post-search-container::before {
+  content: "🔍";
+  position: absolute;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #999;
+  pointer-events: none;
+}
+
+.post-search-input {
+  width: 100%;
+  padding: 10px 15px 10px 35px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  background-color: white;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.post-search-input:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 2px rgba(0, 128, 128, 0.1);
+}
+
+.post-search-input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Profile image with minimal right margin */
+.profile-pic-small, .default-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 6px; /* Only right margin for spacing */
+  flex-shrink: 0;
+  margin-left: 30px;
+  order: 0; /* Ensure it's the first item */
+}
+
+.default-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-color: var(--teal);
+  color: white;
+  font-size: 17px; /* Reduced from 30px to position closer to the left */
+ 
+}
+
+/* Tight user details layout */
+.user-details {
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Allows text truncation */
+  flex-grow: 1;
+  overflow: hidden; /* Prevent overflow */
+  max-width: calc(100% - 100px); /* Leave space for buttons */
+}
+
+.username {
+  font-weight: 600;
+  color: rgb(1, 1, 166);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 100%; /* Ensure it doesn't overflow */
+}
+
+.post-time {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 1px;
+}
+
+.more-btn {
+  background: none;
+  border: none;
+  color: #777;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+}
+
+.post-actions-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.download-btn-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.download-btn-header:hover {
+  background-color: #45a049;
+  transform: translateY(-1px);
+}
+
+.download-btn-header svg {
+  width: 18px;
+  height: 18px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: rgba(255, 77, 77, 0.1);
+}
+
+/* Rest of your existing styles... */
+.post-media {
+  margin: 10px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.post-image,
+.post-video {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  display: block;
+}
+
+.post-details {
+  padding: 0.5rem 0.75rem 0.75rem;
+}
+
+.caption {
+  margin: 0.25rem 0;
+  line-height: 1.4;
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.caption-username {
+  font-weight: 600;
+  margin-right: 6px;
+  color: var(--navy);
+}
+
+.placeholder-text {
+  color: #bbb;
+  font-style: italic;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0.5rem 0;
+}
+
+.tag {
+  color: var(--teal);
+  font-size: 0.9rem;
+}
+
+/* Comments section */
+.comments-section {
+  margin: 0.75rem 0 0.5rem 0;
+}
+
+.view-comments {
+  background: none;
+  border: none;
+  color: #777;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.comments-list {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 8px;
+}
+
+.comment {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.comment-preview {
+  font-size: 0.9rem;
+}
+
+/* Add comment form */
+.add-comment {
+  display: flex;
+  margin-top: 0.75rem;
+  border-top: 1px solid #eee;
+  padding-top: 0.75rem;
+}
+
+.comment-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.comment-submit {
+  padding: 8px 16px;
+  background-color: var(--teal);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.comment-submit:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.comment-submit:not(:disabled):hover {
+  background-color: var(--cadetblue);
+}
+
+/* Post actions */
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-top: 1px solid #eee;
+}
+
+.left-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.action-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.action-btn.liked {
+  color: #FF69B4; /* Pink color for liked state */
+  transform: scale(1.05);
+}
+
+.action-btn.bookmarked {
+  color: #008080; /* Teal color for bookmarked state */
+}
+
+.action-btn:hover:not(:disabled) {
+  transform: scale(1.1);
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.action-btn span {
+  font-size: 14px;
+  margin-left: 4px;
+}
+
+/* Error states */
+.image-error-message,
+.video-error-message {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+/* Animations */
+.post-image {
+  transition: transform 0.3s ease;
+}
+
+.post-image:hover {
+  transform: scale(1.01);
+}
+
+/* File download styles */
+.post-file {
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.file-icon {
+  font-size: 24px;
+  color: #666;
+}
+
+.file-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.file-name {
+  font-size: 14px;
+  color: #333;
+  word-break: break-all;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 6px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  max-width: 80px;
+}
+
+.download-btn:hover {
+  background-color: #45a049;
+}
+
+.download-btn:active {
+  transform: scale(0.98);
+}
+
+.download-btn svg {
+  width: 12px;
+  height: 12px;
+}

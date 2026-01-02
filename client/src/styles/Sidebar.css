@@ -1,0 +1,147 @@
+.sidebar {
+  width: 280px;
+  background: linear-gradient(to bottom, var(--navy), #1a1a4f);
+  color: white;
+  padding: 1.5rem;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+  margin-bottom: 2rem;
+}
+
+.sidebar-header h2 {
+  color: var(--hot-pink);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  order: 1; /* Move to the left */
+  margin-right: 1rem;
+}
+
+.default-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--teal);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  order: 1; /* Move to the left */
+  margin-right: 1rem;
+}
+
+.user-profile h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  color: whitesmoke;
+  order: 2; /* Move to the right */
+}
+
+.stats-section {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.stat-item:last-child {
+  margin-bottom: 0;
+}
+
+.stat-label {
+  color: var(--cadetblue);
+}
+
+.stat-value {
+  font-weight: 600;
+}
+
+.sidebar-nav {
+  flex: 1;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.nav-item i {
+  margin-right: 0.8rem;
+  width: 20px;
+  text-align: center;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid transparent;
+}
+
+.nav-item.active {
+  background-color: var(--teal);
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-top: auto;
+}
+
+.logout-btn i {
+  margin-right: 0.8rem;
+  border-left: 3px solid white;
+}
+
+.logout-btn:hover {
+  background-color: rgba(255, 105, 180, 0.2);
+}
